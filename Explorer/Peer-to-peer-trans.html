@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ElrondApes Explorer</title>
+    <meta name="description" content="ElrondApes Explorer &#129421;">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="EApes_Fetch_Script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Doc.css">
+  </head>
+  <body class="container" style="padding-top: 5%;">
+
+    <h2 style="color:black">Elrond Apes Blockchain Explorer</h2>
+    <h4>Search by address to see peer-to-peer transactions <i style="color:black" class="fa fa-exchange"></i></h4>
+    <h6 style="font-size: 16px;">(This explorer looks for the movement of EAPES-8f3c1f NFTs wallet-to-wallet directly before or after the transfer of EGLD <u>not</u> to a Smart Contract) erd18wa3vz8r4zye7el55alyf7llt9gjnghlturl2ft28a72x6f0jt6smkra3t</h6>
+
+
+    <hr class="line">
+
+    <div class="row">
+      <div class="column">
+        <label>Wallet address <i style="font-size:18px; color:black" class="fa fa-id-card"></i></label>
+        <input type="text" id="myInput" class="placeHolderText" placeholder="Enter an ERD address..." />
+      </div>
+      <div class="column">
+        <br>
+        <button onclick="myFunction()" class="thisIsButton" style="background-color:black; border-radius: 20px; border-color: black;">Search Address <i style="font-size: 14px;" class='fa fa-search'></i></button>
+      </div>
+      </div>
+      <div class="row">
+      <div class="column">
+        <label>Get an address from HeroTag <i style="font-size:18px; color:black" class="fa fa-bolt"></i></label>
+        <input type="text" id= "myInput1" class="placeHolderText" placeholder="Enter a HeroTag..." />
+      </div>
+      <div class="column">
+        <br>
+        <button onclick="getHeroTag()" class="thisIsButton" style="background-color:black; border-radius: 20px; border-color: black;">Get the HeroTag <i style="font-size: 14px" class='fa fa-search'></i></button>
+      </div>
+    </div>
+
+    <hr class="line">
+    <br>
+    <p id="demo1" class="centered"></p>
+
+    <p id="hero" class="centered"></p>
+
+    <div>
+      <table style="border-collapse: separate; border-radius: 3px !important; border: 1px solid #616A6B  ; background-color: #F2F3F4;">
+        <tr id="tableHeading">
+        </tr>
+    
+        <tbody id="myTable">
+            
+        </tbody>
+      </table>
+    
+    </div>
+
+  </body>
+</html>
