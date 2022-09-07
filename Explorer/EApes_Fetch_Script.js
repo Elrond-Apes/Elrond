@@ -265,9 +265,9 @@ function myFunction() {
                   //console.log("test: ",TxType.arguments.transfers[0])
 
 
-                  if(counter == 0 || counter == 1){
+                  if(counter === 0 || counter === 1 || counter === 2){
                     window.alert("This specific address had an issue because of how new the triggering hash is. For now, I am going to skip over the most frequent trigger so the code can execute.")
-                    var counter = 10;
+                    var counter = counter + 2;
                   }
 
                   if(data[counter+1].value > 0 || data[counter+2].value > 0 || data[counter-1].value > 0 || data[counter-2].value > 0){
@@ -444,3 +444,4 @@ function myFunction() {
       FindNftTransfers();
     } // async function 
   }
+
