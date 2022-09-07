@@ -17,7 +17,10 @@
 
     <h2 style="color:black">Elrond Apes Blockchain Explorer</h2>
     <h4>Search by address to see peer-to-peer transactions <i style="color:black" class="fa fa-exchange"></i></h4>
-    <h6 style="font-size: 16px;">(This explorer looks for the movement of <span style="font-weight: bold; text-decoration: underline;">EAPES-8f3c1f</span> NFTs wallet-to-wallet directly before or after the transfer of EGLD sent <span style="font-weight: bold; text-decoration: underline;">not</span> to a Smart Contract) </h6>
+    <!--
+    <h6 style="font-size: 16px;">(This explorer looks for the movement of EAPES-8f3c1f NFTs wallet-to-wallet directly before or after the transfer of EGLD <u>not</u> to a Smart Contract) erd18wa3vz8r4zye7el55alyf7llt9gjnghlturl2ft28a72x6f0jt6smkra3t</h6>
+    -->
+    <h6 style="font-size: 16px;">Elrond Apes p2p Toolkit - Search p2p by address, or see the most recent Elrond Ape transactions</h6>
 
 
     <hr class="line">
@@ -40,7 +43,31 @@
       <div class="column">
         <br>
         <button onclick="getHeroTag()" class="thisIsButton" style="background-color:black; border-radius: 20px; border-color: black;">Get the HeroTag <i style="font-size: 14px" class='fa fa-search'></i></button>
+    </div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="column">
+        <label>Find the owner of an Ape <i style="font-size:18px; color:black" class="fa fa-map-marker"></i></label>
+        <input type="text" id= "myInput2" class="placeHolderText" placeholder="Enter Ape Identifier (such as 'EAPES-8f3c1f-0d9e')..." />
       </div>
+      <div class="column">
+        <br>
+        <button onclick="FindOwner()" class="thisIsButton" style="background-color:black; border-radius: 20px; border-color: black;">Find Owner <i style="font-size: 14px" class='fa fa-search'></i></button>
+    </div>
+    </div>
+  
+    <div class="row">
+      
+      <div class="column">
+        <label>See latest Ape Transactions <i style="font-size:18px; color:black" class="fa fa-chain"></i></label>
+        <!--<input type="text" id= "myInput3" class="placeHolderText" placeholder="Enter Ape Identifier..." />-->
+      </div>
+      <div class="row" style="margin-left: 5px;">
+        <br>
+        <button onclick="GetRecentApeTransactions()" class="thisIsButton" style="background-color:black; border-radius: 20px; border-color: black;">Latest Transactions <i style="font-size: 14px" class='fa fa-external-link'></i></button>
+    </div>
     </div>
 
     <hr class="line">
@@ -58,8 +85,18 @@
             
         </tbody>
       </table>
+
+      <table style="border-collapse: separate; border-radius: 3px !important; border: 1px solid #616A6B  ; background-color: #F2F3F4;">
+        <tr id="tableHeading1">
+        </tr>
+    
+        <tbody id="myTable1">
+            
+        </tbody>
+      </table>
     
     </div>
+
 
   </body>
 </html>
