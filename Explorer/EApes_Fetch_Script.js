@@ -266,7 +266,7 @@ function myFunction() {
 
 
                   if(counter === 0 || counter === 1 || counter === 2){
-                    window.alert("This specific address had an issue because of how new the triggering hash is. For now, I am going to skip over the most frequent trigger so the code can execute.")
+                    window.alert("This specific address had an issue because of how new the most recent ape transfer was. For now, the code will skip over the most recent ape transfer and continue to look for more p2p.")
                     var counter = counter + 2;
                   }
 
