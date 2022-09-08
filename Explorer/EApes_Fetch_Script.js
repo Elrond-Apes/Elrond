@@ -252,6 +252,10 @@ function myFunction() {
             if(DataCounter.sender != "erd1w9mmxz6533m7cf08gehs8phkun2x4e8689ecfk3makk3dgzsgurszhsxk4" && DataCounter.receiver != "erd1w9mmxz6533m7cf08gehs8phkun2x4e8689ecfk3makk3dgzsgurszhsxk4"){
             //console.log("Values: ",Object.values(DataCounter))
             //console.log(Object.values(DataCounter).length)
+            if(counter === 0 || counter === 1 || counter === 2){
+              window.alert("This specific address had an issue because of how new the most recent ape transfer was. For now, the code will skip over the most recent ape transfer and continue to look for more p2p.")
+              var counter = counter + 2;
+            }
             NumberLengthOfObj = Object.values(DataCounter).length
             //console.log("Length: ",NumberLengthOfObj)
             if(NumberLengthOfObj>=17){
@@ -264,11 +268,12 @@ function myFunction() {
                 if (CollectionId==="EAPES-8f3c1f"){
                   //console.log("test: ",TxType.arguments.transfers[0])
 
-
+                  /*
                   if(counter === 0 || counter === 1 || counter === 2){
                     window.alert("This specific address had an issue because of how new the most recent ape transfer was. For now, the code will skip over the most recent ape transfer and continue to look for more p2p.")
                     var counter = counter + 2;
                   }
+                  */
 
                   if(data[counter+1].value > 0 || data[counter+2].value > 0 || data[counter-1].value > 0 || data[counter-2].value > 0){
 
@@ -444,4 +449,3 @@ function myFunction() {
       FindNftTransfers();
     } // async function 
   }
-
